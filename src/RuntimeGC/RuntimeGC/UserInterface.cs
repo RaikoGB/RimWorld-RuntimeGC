@@ -56,7 +56,7 @@ namespace RuntimeGC
             Text.Font = GameFont.Medium;
             std.Label("RuntimeGCTitle".Translate());
             Text.Font = GameFont.Small;
-            std.Label("RuntimeGCVer".Translate("1.0"));
+            std.Label("RuntimeGCVer".Translate("1.1"));
             std.Label("By user19990313");
             std.Gap();
             std.Label(string.Concat(new object[]{"pawnsAlive:",
