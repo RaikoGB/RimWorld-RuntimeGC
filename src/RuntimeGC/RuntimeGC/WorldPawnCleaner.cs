@@ -217,6 +217,16 @@ namespace RuntimeGC
             foreach (Pawn p in allUsedTalePawns)
                 reference.Remove(p);
 
+            /*Exclude quest pawns*/
+            var questThings = Find.QuestManager.QuestsListForReading
+                .Where(q => q.State == QuestState.NotYetAccepted)
+                .SelectMany(q => q.QuestLookTargets)
+                .Where(x => x.Thing != null)
+                .Select(x => x.Thing)
+                .Distinct()
+                .ToList();
+            Verse.Log.Message($"[GC Log] Excluding Quest Pawns: {reference.RemoveAll(p => questThings.Contains(p))}");
+
 
             /*GC Core:dispose all pawns left in reference list.*/
             Verse.Log.Message("[GC Log] Disposing World Pawns...");

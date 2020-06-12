@@ -121,7 +121,7 @@ namespace RuntimeGC
             this.InitMemoryMonitor();
 
             this.AutoCleanModMetaData = true;
-            this.AutoCleanLanguageData = true;
+            this.AutoCleanLanguageData = false;
             this.AutoCleanDefPackage = false;
 
             this.DoMuteGC = true;
@@ -175,7 +175,7 @@ namespace RuntimeGC
             Scribe_Values.Look<bool>(ref EnableMemoryUsageTip, "EnableMemoryUsageTip", true);
 
             Scribe_Values.Look<bool>(ref AutoCleanModMetaData, "AutoCleanModMetaData", true);
-            Scribe_Values.Look<bool>(ref AutoCleanLanguageData, "AutoCleanLanguageData", true);
+            Scribe_Values.Look<bool>(ref AutoCleanLanguageData, "AutoCleanLanguageData", false);
             Scribe_Values.Look<bool>(ref AutoCleanDefPackage, "AutoCleanDefPackage", false);
 
             Scribe_Values.Look<bool>(ref DoMuteGC, "DoMuteGC", true);

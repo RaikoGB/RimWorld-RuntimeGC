@@ -18,3 +18,5 @@ z:\RimWorld-RuntimeGC\src\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.csprojAssemb
 z:\RimWorld-RuntimeGC\src\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.csproj.CoreCompileInputs.cache
 z:\RimWorld-RuntimeGC\src\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.dll
 z:\RimWorld-RuntimeGC\src\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.pdb
+z:\RimWorld-RuntimeGC\RuntimeGC\Assemblies\RuntimeGC.dll
+z:\RimWorld-RuntimeGC\RuntimeGC\Assemblies\RuntimeGC.pdb
