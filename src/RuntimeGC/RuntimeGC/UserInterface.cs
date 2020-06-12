@@ -167,7 +167,7 @@ namespace RuntimeGC
                                                j);
             Find.WindowStack.Add(new Dialog_MessageBox(str + "\n\n" + (i == j ?
                                                                 "DlgTextGCAdvice1".Translate() : "DlgTextGCAdvice2".Translate(i - j))
-                                                               + (verbose ? "\n\n" + "DlgTextGCV".Translate() : "")
+                                                               + (verbose ? "\n\n" + "DlgTextGCV".Translate().ToString() : "")
             ));
             if(RuntimeGC.Settings.ArchiveGCDialog)
                 Find.Archive.Add(new ArchivedDialog(str, "DlgArchiveTitle".Translate(), null));

@@ -14,3 +14,7 @@ D:\CSharp\Workspace\Projects\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.csproj.Co
 D:\CSharp\Workspace\Projects\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.csproj.CopyComplete
 D:\CSharp\Workspace\Projects\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.dll
 D:\CSharp\Workspace\Projects\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.pdb
+z:\RimWorld-RuntimeGC\src\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.csprojAssemblyReference.cache
+z:\RimWorld-RuntimeGC\src\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.csproj.CoreCompileInputs.cache
+z:\RimWorld-RuntimeGC\src\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.dll
+z:\RimWorld-RuntimeGC\src\RuntimeGC\RuntimeGC\obj\Release\RuntimeGC.pdb

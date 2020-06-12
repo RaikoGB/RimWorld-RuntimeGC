@@ -30,7 +30,7 @@ namespace Toolbox
                 else
                 {
                     s2.AppendWithComma(list[i].Name);
-                    list[i].previewImage = new Texture2D(0, 0);
+                    list[i].UnsetPreviewImage();
                     b++;
                 }
             }
@@ -84,13 +84,13 @@ namespace Toolbox
 
         public static void CleanDefPackage()
         {
-            FieldInfo defPackages = typeof(ModContentPack).GetField("defPackages", BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public);
+            FieldInfo defPackages = typeof(ModContentPack).GetField("defs", BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public);
             int a = 0;
             foreach (ModContentPack pack in LoadedModManager.RunningMods)
             {
                 if (pack.IsCoreMod) coreMod = pack;
-                a += ((List<DefPackage>)defPackages.GetValue(pack)).Count;
-                defPackages.SetValue(pack, new List<DefPackage>());
+                a += ((List<Def>)defPackages.GetValue(pack)).Count;
+                defPackages.SetValue(pack, new List<Def>());
             }
 
             Verse.Log.Message("[DefPackageCleaner] Cleaned " + a + " DefPackages.");
