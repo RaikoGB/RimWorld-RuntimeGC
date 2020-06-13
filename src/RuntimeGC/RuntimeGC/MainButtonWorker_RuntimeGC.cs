@@ -93,7 +93,7 @@ namespace RuntimeGC
             }
 
             bool flag = num > 0.85f * rect.width - 1f;
-            string label = onScreenMemUsage ? labelCache : text;
+            string label = def.Icon != null ? String.Empty : (onScreenMemUsage ? labelCache : text);
             float textLeftMargin = (!flag) ? -1f : 2f;
             if (Widgets.ButtonTextSubtle(rect, label, progress, textLeftMargin, SoundDefOf.Mouseover_Category, default(Vector2)))
             {
@@ -102,6 +102,17 @@ namespace RuntimeGC
             }
 
             TooltipHandler.TipRegion(rect, TabDescriptionTranslated + tipCache);
+
+            if (def.Icon != null)
+            {
+                Vector2 vector = rect.center;
+                float num2 = 16f;
+                if (Mouse.IsOver(rect))
+                {
+                    vector += new Vector2(2f, -2f);
+                }
+                GUI.DrawTexture(new Rect(vector.x - num2, vector.y - num2, 32f, 32f), this.def.Icon);
+            }
         }
     }
 }
