@@ -98,7 +98,15 @@ namespace RuntimeGC
                 Message("MsgTextRAM".Translate(CleanserUtil.RemoveIArchivable(true)), MessageTypeDefOf.PositiveEvent);
             },true);
 
+            //StorytellerFix menus here
 
+            //Storyteller Info Window for non Dev Mode
+            Add(group, "StorytellerFixQueueInfo".Translate(), delegate {StorytellerFix.StorytellerFix_GetInfoButton();}, false);
+
+            //Storyteller Clear Queue for Dev Mode only
+            Add(group, "StorytellerFixQueueClearDev".Translate(), delegate {StorytellerFix.StorytellerFix_ClearButton();}, true);
+
+            //end of StorytellerFix
             
 
             group = GroupQuickbar;
